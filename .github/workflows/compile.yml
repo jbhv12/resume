@@ -22,7 +22,7 @@ jobs:
         with:
           output_dir: output
           main_latex_file: main.tex
-          ctan_packages: amsmath amsfonts lua-uni-algos moderncv academicons arydshln luatexbase multirow fontawesome5 xargs bigfoot colortbl pgf
+          ctan_packages: amsmath amsfonts lua-uni-algos moderncv academicons arydshln luatexbase multirow fontawesome5 xargs bigfoot colortbl pgf fullpage
       - name: Upload PDF to the workflow tab
         id: upload-workflow-tab
         uses: actions/upload-artifact@v2
