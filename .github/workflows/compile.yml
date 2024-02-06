@@ -16,13 +16,8 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: latex2pdf
-        id: compile-latex-document
-        uses: thomas-chauvet/latex2pdf-action@1.0.4
-        with:
-          output_dir: output
-          main_latex_file: main.tex
-          ctan_packages: amsmath amsfonts lua-uni-algos moderncv academicons arydshln luatexbase multirow fontawesome5 xargs bigfoot colortbl pgf fullpage
+      - name: Compile LaTeX to PDF
+        run: docker run --rm -i -v $(pwd):/data mingc/latex pdflatex main.tex
       - name: Upload PDF to the workflow tab
         id: upload-workflow-tab
         uses: actions/upload-artifact@v2
