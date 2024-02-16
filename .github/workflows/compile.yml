@@ -39,3 +39,4 @@ jobs:
           files:
             - name: PDF
               path: main.pdf
+          overwrite: true
