@@ -23,20 +23,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: output
-          path: main.pdf      
-      - name: Create GitHub Release
-        id: create-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} 
-        with:
-          tag_name: latest
-          release_name: latest
-          body: |
-            This is an automated release created by the GitHub Actions workflow.
-          draft: false
-          prerelease: false
-          files:
-            - name: PDF
-              path: main.pdf
-          overwrite: true
+          path: main.pdf
