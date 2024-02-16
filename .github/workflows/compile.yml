@@ -36,3 +36,6 @@ jobs:
             This is an automated release created by the GitHub Actions workflow.
           draft: false
           prerelease: false
+          files:
+            - name: PDF
+              path: main.pdf
