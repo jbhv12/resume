@@ -5,6 +5,7 @@ on:
     branches: 
       - main
       - develop
+      - soft
     tags:
        - '*'
   pull_request:
